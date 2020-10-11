@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import miracast.android.to.tv.MainActivity
 import miracast.android.to.tv.R
+import miracast.android.to.tv.connection_mode.ConnectionModeActivity
 import miracast.android.to.tv.databinding.ActivityTvListBinding
 import miracast.android.to.tv.databinding.TvListRecyclerItemViewModelBinding
 
@@ -46,7 +47,7 @@ class TvListRecyclerAdapter(
         Picasso.get().load(R.drawable.arrow_right).error(R.drawable.arrow_right).into(holder.binding.recyclerTvItemArrowRightImageView)
 
         holder.binding.root.setOnClickListener {
-            val intent: Intent = Intent(context, MainActivity::class.java)
+            val intent: Intent = Intent(context, ConnectionModeActivity::class.java)
             context.startActivity(intent)
         }
 
