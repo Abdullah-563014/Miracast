@@ -26,7 +26,7 @@ class TvListActivity : AppCompatActivity() {
     }
 
     private fun temporaryData() {
-        for (item in 0..10) {
+        for (item in 0..50) {
             list.add("Item number "+item)
         }
         adapter.notifyDataSetChanged()

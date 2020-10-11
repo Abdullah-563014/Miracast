@@ -10,8 +10,11 @@
         android:id="@+id/tvListRecyclerView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/otherButton"
+        android:layoutAnimation="@anim/recycler_layout_animator"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
+
     <Button
         android:id="@+id/otherButton"
         style="@style/MyButtonStyle"

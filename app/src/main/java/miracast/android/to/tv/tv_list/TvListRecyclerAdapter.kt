@@ -50,11 +50,15 @@ class TvListRecyclerAdapter(
             context.startActivity(intent)
         }
 
-        setAnimation(holder.binding.root, position)
     }
 
     override fun getItemCount(): Int {
         return list.size
+    }
+
+    override fun onViewAttachedToWindow(holder: TvListViewHolder) {
+        super.onViewAttachedToWindow(holder)
+        setAnimation(holder.binding.root, 0)
     }
 
     override fun onViewDetachedFromWindow(holder: TvListViewHolder) {
@@ -69,12 +73,10 @@ class TvListRecyclerAdapter(
 
 
     private fun setAnimation(viewToAnimate: View, position: Int) {
-        if (position > lastPosition) {
-            val animation: Animation =
-                AnimationUtils.loadAnimation(context, R.anim.slide_right_to_left)
-            viewToAnimate.startAnimation(animation)
-            lastPosition = position
-        }
+        val animation: Animation =
+            AnimationUtils.loadAnimation(context, R.anim.slide_right_to_left)
+        viewToAnimate.startAnimation(animation)
+        lastPosition = position
     }
 
 
