@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Miracast</string>
+    <string name="sub_title">For Android to TV</string>
+    <string name="lets_start">Let\'s Start</string>
+    <string name="tv_item_name">Tv Item Name</string>
+    <string name="others">Others</string>
+</resources>
