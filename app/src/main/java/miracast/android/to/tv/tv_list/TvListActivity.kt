@@ -2,7 +2,9 @@ package miracast.android.to.tv.tv_list
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import miracast.android.to.tv.R
 import miracast.android.to.tv.databinding.ActivityTvListBinding
 
 class TvListActivity : AppCompatActivity() {
@@ -20,15 +22,13 @@ class TvListActivity : AppCompatActivity() {
 
         setUpRecyclerView()
 
-        temporaryData()
+        loadTvListData()
 
 
     }
 
-    private fun temporaryData() {
-        for (item in 0..50) {
-            list.add("Item number "+item)
-        }
+    private fun loadTvListData() {
+        list.addAll(resources.getStringArray(R.array.tv_list_array))
         adapter.notifyDataSetChanged()
     }
 

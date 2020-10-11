@@ -42,7 +42,7 @@ class TvListRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: TvListViewHolder, position: Int) {
-        Picasso.get().load(R.drawable.ic_launcher).error(R.drawable.ic_launcher).into(holder.binding.recyclerTvItemCastImageView)
+        Picasso.get().load(R.drawable.ic_screen_cast).error(R.drawable.ic_screen_cast).into(holder.binding.recyclerTvItemCastImageView)
         holder.binding.recyclerTvItemNameTextView.text=list.get(position)
         Picasso.get().load(R.drawable.arrow_right).error(R.drawable.arrow_right).into(holder.binding.recyclerTvItemArrowRightImageView)
 

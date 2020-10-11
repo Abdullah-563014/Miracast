@@ -4,4 +4,99 @@
     <string name="lets_start">Let\'s Start</string>
     <string name="tv_item_name">Tv Item Name</string>
     <string name="others">Others</string>
+
+
+
+    <string-array name="tv_list_array">
+        <item>Acer</item>
+        <item>Admiral</item>
+        <item>Aiwa</item>
+        <item>Akai</item>
+        <item>Apex</item>
+        <item>Audiovox</item>
+        <item>Bose</item>
+        <item>Bush</item>
+        <item>Changhong</item>
+        <item>Coby</item>
+        <item>Colby</item>
+        <item>Condor</item>
+        <item>Zenith</item>
+        <item>Dura Brand</item>
+        <item>Dynex</item>
+        <item>Element</item>
+        <item>Emerson</item>
+        <item>Funai</item>
+        <item>Haier</item>
+        <item>Hisense</item>
+        <item>Hitachi</item>
+        <item>Hyundai</item>
+        <item>Insignia</item>
+        <item>Jensen</item>
+        <item>Kenwood</item>
+        <item>LG</item>
+        <item>Logik</item>
+        <item>Magnavox</item>
+        <item>Mascom</item>
+        <item>Medion</item>
+        <item>Micromax</item>
+        <item>Mitsubishi</item>
+        <item>Mystery</item>
+        <item>NEC</item>
+        <item>Nexus</item>
+        <item>Nikai</item>
+        <item>Noblex</item>
+        <item>Olevia</item>
+        <item>Onida</item>
+        <item>Orion</item>
+        <item>Palsonic</item>
+        <item>Panasonic</item>
+        <item>Philco</item>
+        <item>Philips</item>
+        <item>Pioneer</item>
+        <item>Polaroid</item>
+        <item>Polytron</item>
+        <item>Prima</item>
+        <item>Promac</item>
+        <item>Proscan</item>
+        <item>Philco</item>
+        <item>Proton</item>
+        <item>Rubin</item>
+        <item>Samsung</item>
+        <item>Samsung Smart</item>
+        <item>Sansui</item>
+        <item>Sanyo</item>
+        <item>Scott</item>
+        <item>Seiki</item>
+        <item>Sharp</item>
+        <item>Singer</item>
+        <item>Sinotec</item>
+        <item>Skyworth</item>
+        <item>Sony</item>
+        <item>Supra</item>
+        <item>Swisstec</item>
+        <item>Sylvania</item>
+        <item>Symphonic</item>
+        <item>TCL</item>
+        <item>Technical</item>
+        <item>Thomson</item>
+        <item>Tokai</item>
+        <item>Toshiba</item>
+        <item>TurboX</item>
+        <item>Upstar</item>
+        <item>Venturer</item>
+        <item>Veon</item>
+        <item>Videocon</item>
+        <item>Viore</item>
+        <item>Vizio</item>
+        <item>Voxson</item>
+        <item>Westinghouse</item>
+        <item>Multi TV</item>
+        <item>SFR</item>
+        <item>Start Times</item>
+        <item>Total Play</item>
+        <item>Trend</item>
+    </string-array>
+
+
+
 </resources>
