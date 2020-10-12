@@ -9,7 +9,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import miracast.android.to.tv.MainActivity
+import miracast.android.to.tv.home.MainActivity
 import miracast.android.to.tv.R
 import miracast.android.to.tv.connection_mode.ConnectionModeActivity
 import miracast.android.to.tv.databinding.ActivityTvListBinding

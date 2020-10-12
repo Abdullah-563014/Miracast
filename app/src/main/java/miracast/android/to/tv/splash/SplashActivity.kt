@@ -7,7 +7,6 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
-import miracast.android.to.tv.MainActivity
 import miracast.android.to.tv.R
 import miracast.android.to.tv.databinding.ActivitySplashBinding
 import miracast.android.to.tv.tv_list.TvListActivity

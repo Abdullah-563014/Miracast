@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".connection_mode.ConnectionModeActivity">
-
+    <ImageView
+        android:id="@+id/appLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.10"
+        android:src="@drawable/ic_launcher"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp"/>
+    <TextView
+        android:id="@+id/connectionModeTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/appLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:text="@string/connection_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/connectionModeTitleTextView"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/autoModeRadioButton"
+            android:text="@string/auto_mode"
+            android:background="@drawable/button_transparent_background"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:checked="true"
+            android:textAlignment="center"
+            android:button="@drawable/radio_button_inset"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/manualModeRadioButton"
+            android:text="@string/manual_mode"
+            android:background="@drawable/button_transparent_background"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:button="@drawable/radio_button_inset"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/MyButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:text="@string/next"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

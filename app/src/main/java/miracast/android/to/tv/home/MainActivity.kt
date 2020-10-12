@@ -1,4 +1,4 @@
-package miracast.android.to.tv
+package miracast.android.to.tv.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
