@@ -9,7 +9,11 @@
     <string name="auto_mode">Auto Mode</string>
     <string name="manual_mode">Manual Mode</string>
     <string name="next">Next</string>
-
+    <string name="scanning_for_tv">Scanning for TVs</string>
+    <string name="detecting_model">Detecting model</string>
+    <string name="installing_drivers">Installing drivers</string>
+    <string name="connecting">Connecting</string>
+    <string name="ok">Ok</string>
 
 
     <string-array name="tv_list_array">
@@ -101,7 +105,6 @@
         <item>Total Play</item>
         <item>Trend</item>
     </string-array>
-
 
 
 </resources>

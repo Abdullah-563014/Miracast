@@ -29,7 +29,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
 
     private fun setUpUi() {
-        Picasso.get().load(R.drawable.ic_launcher).into(binding.splashLogo)
+        Picasso.get().load(R.drawable.ic_launcher).error(R.drawable.ic_launcher).into(binding.splashLogo)
         binding.splashLetsStartButton.setOnClickListener(this)
     }
 

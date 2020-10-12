@@ -27,7 +27,7 @@ class TvListRecyclerAdapter(
     init {
 
         tvListActivityBinding.otherButton.setOnClickListener {
-            val intent: Intent = Intent(context, MainActivity::class.java)
+            val intent: Intent = Intent(context, ConnectionModeActivity::class.java)
             context.startActivity(intent)
         }
     }

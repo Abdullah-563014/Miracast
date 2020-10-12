@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".connection_mode.ConnectionModeActivity"></activity>
+        <activity android:name=".preparation.PreparationActivity"></activity>
+        <activity android:name=".progress.ProgressActivity" />
+        <activity android:name=".connection_mode.ConnectionModeActivity" />
         <activity android:name=".tv_list.TvListActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
