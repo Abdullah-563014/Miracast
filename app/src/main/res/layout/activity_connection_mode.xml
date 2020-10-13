@@ -36,7 +36,6 @@
         android:gravity="center"
         android:layout_height="wrap_content">
         <RadioButton
-            android:id="@+id/autoModeRadioButton"
             android:text="@string/auto_mode"
             android:background="@drawable/button_transparent_background"
             android:textColor="@color/colorWhite"
@@ -48,7 +47,6 @@
             android:layout_width="@dimen/_180sdp"
             android:layout_height="wrap_content"/>
         <RadioButton
-            android:id="@+id/manualModeRadioButton"
             android:text="@string/manual_mode"
             android:background="@drawable/button_transparent_background"
             android:textColor="@color/colorWhite"

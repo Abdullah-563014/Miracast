@@ -28,7 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
-        android:id="@+id/subTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/appNameTextView"
         android:text="@string/sub_title"
         android:textSize="@dimen/_18ssp"

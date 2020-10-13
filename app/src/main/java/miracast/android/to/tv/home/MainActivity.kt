@@ -1,6 +1,7 @@
 package miracast.android.to.tv.home
 
 import android.app.Activity
+import android.app.AlertDialog.THEME_HOLO_LIGHT
 import android.content.*
 import android.net.Uri
 import android.net.wifi.WifiManager
@@ -63,16 +64,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-
-    fun enablingWiFiDisplay() {
-        if (wifi!!.isWifiEnabled) {
-            wifidisplay()
-            return
-        }
-        wifi.isWifiEnabled = true
-        wifidisplay()
-    }
-
     private fun wifidisplay() {
         try {
             startActivity(Intent(ACTION_WIFI_DISPLAY_SETTINGS))
@@ -92,7 +83,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
-            super.onBackPressed()
+            finishAffinity()
             return
         }
         doubleBackToExitPressedOnce = true
@@ -100,10 +91,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
     }
 
-    fun rateMyApp() {
+    private fun rateMyApp() {
         val counter : Int = Utils.getIntFromStorage(applicationContext,counterKey,0)
         if (counter != 0 && counter % 5 == 0) {
-            val alert: AlertDialog.Builder = AlertDialog.Builder(this)
+            val alert: AlertDialog.Builder = AlertDialog.Builder(this,R.style.MyDialogTheme)
             alert.setTitle(resources.getString(R.string.please_rate))
             alert.setMessage(resources.getString(R.string.a_moment_to_rate))
             alert.setPositiveButton(resources.getString(R.string.cancel)

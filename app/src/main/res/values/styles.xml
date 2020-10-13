@@ -38,4 +38,8 @@
         <item name="android:textColor">@color/colorWhite</item>
     </style>
 
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/colorGreen</item>
+    </style>
+
 </resources>
