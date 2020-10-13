@@ -5,39 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".preparation.PreparationActivity">
+    tools:context=".guide.GuideActivity">
     <TextView
-        android:id="@+id/stepTextView"
+        android:id="@+id/guideTextView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/step"
+        android:text="@string/instruction"
         android:textSize="@dimen/_18ssp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/preparationStepGuideParent"
-        app:layout_constraintTop_toBottomOf="@+id/stepTextView"
+        android:id="@+id/guideStepParent"
+        app:layout_constraintTop_toBottomOf="@+id/guideTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/preparationStepOneParent"
+            android:id="@+id/guideStepOneParent"
             app:layout_constraintTop_toTopOf="parent"
             android:paddingEnd="@dimen/_5sdp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp">
+            android:layout_height="@dimen/_40sdp">
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/preparationStepOneLeftLayoutParent"
+                android:id="@+id/guideStepOneLeftLayoutParent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/preparationStepOneNumberTextView"
+                    android:id="@+id/guideStepOneNumberTextView"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"/>
                 <View
-                    app:layout_constraintTop_toBottomOf="@+id/preparationStepOneNumberTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/guideStepOneNumberTextView"
                     android:background="@drawable/vertical_white_line"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -58,27 +58,27 @@
                     android:layout_height="0dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
-                app:layout_constraintStart_toEndOf="@id/preparationStepOneLeftLayoutParent"
+                app:layout_constraintStart_toEndOf="@id/guideStepOneLeftLayoutParent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/tv_and_mobile_same_wifi"
+                android:text="@string/turn_on_tv"
                 android:textSize="@dimen/_15ssp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/preparationStepTwoParent"
-            app:layout_constraintTop_toBottomOf="@+id/preparationStepOneParent"
+            android:id="@+id/guideStepTwoParent"
+            app:layout_constraintTop_toBottomOf="@+id/guideStepOneParent"
             android:paddingEnd="@dimen/_5sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_60sdp">
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/preparationStepTwoLeftLayoutParent"
+                android:id="@+id/guideStepTwoLeftLayoutParent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/preparationStepTwoNumberTextView"
+                    android:id="@+id/guideStepTwoNumberTextView"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"/>
                 <View
-                    app:layout_constraintTop_toBottomOf="@+id/preparationStepTwoNumberTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/guideStepTwoNumberTextView"
                     android:background="@drawable/vertical_white_line"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -99,27 +99,27 @@
                     android:layout_height="0dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
-                app:layout_constraintStart_toEndOf="@id/preparationStepTwoLeftLayoutParent"
+                app:layout_constraintStart_toEndOf="@id/guideStepTwoLeftLayoutParent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/miracast_display_enabled"
+                android:text="@string/tv_and_mobile_same_wifi"
                 android:textSize="@dimen/_15ssp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/preparationStepThreeParent"
-            app:layout_constraintTop_toBottomOf="@+id/preparationStepTwoParent"
+            android:id="@+id/guideStepThreeParent"
+            app:layout_constraintTop_toBottomOf="@+id/guideStepTwoParent"
             android:paddingEnd="@dimen/_5sdp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_60sdp">
+            android:layout_height="@dimen/_65sdp">
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/preparationStepThreeLeftLayoutParent"
+                android:id="@+id/guideStepThreeLeftLayoutParent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/preparationStepThreeNumberTextView"
+                    android:id="@+id/guideStepThreeNumberTextView"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -131,39 +131,96 @@
                     android:background="@drawable/step_bg"
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"/>
+                <View
+                    app:layout_constraintTop_toBottomOf="@+id/guideStepThreeNumberTextView"
+                    android:background="@drawable/vertical_white_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="0dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
-                app:layout_constraintStart_toEndOf="@id/preparationStepThreeLeftLayoutParent"
+                app:layout_constraintStart_toEndOf="@id/guideStepThreeLeftLayoutParent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/miracast_display_enabled"
+                android:textSize="@dimen/_15ssp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/guideStepFourParent"
+            app:layout_constraintTop_toBottomOf="@+id/guideStepThreeParent"
+            android:paddingEnd="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/guideStepFourLeftLayoutParent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/guideStepFourNumberTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="4"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@drawable/step_bg"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+                <View
+                    app:layout_constraintTop_toBottomOf="@+id/guideStepFourNumberTextView"
+                    android:background="@drawable/vertical_white_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="0dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/guideStepFourLeftLayoutParent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/click_start_and_wifi_display"
                 android:textSize="@dimen/_15ssp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/guideStepFiveParent"
+            app:layout_constraintTop_toBottomOf="@+id/guideStepFourParent"
+            android:paddingEnd="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/guideStepFiveLeftLayoutParent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/guideStepFiveNumberTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="5"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@drawable/step_bg"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                app:layout_constraintStart_toEndOf="@id/guideStepFiveLeftLayoutParent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/both_device_connect_automatically"
+                android:textSize="@dimen/_15ssp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/preparationStartButton"
-        app:layout_constraintTop_toBottomOf="@+id/preparationStepGuideParent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/start"
-        android:textSize="@dimen/_18ssp"
-        android:textAllCaps="false"
-        android:background="@drawable/general_button_background"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_40sdp"/>
-    <Button
-        android:id="@+id/preparationGuideButton"
-        app:layout_constraintTop_toBottomOf="@+id/preparationStartButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/guide"
-        android:textSize="@dimen/_18ssp"
-        android:textAllCaps="false"
-        android:background="@drawable/general_button_background"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_40sdp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

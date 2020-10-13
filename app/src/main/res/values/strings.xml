@@ -14,6 +14,25 @@
     <string name="installing_drivers">Installing drivers</string>
     <string name="connecting">Connecting</string>
     <string name="ok">Ok</string>
+    <string name="step">Step:</string>
+    <string name="tv_and_mobile_same_wifi">TV and Mobile should be on same wifi network</string>
+    <string name="miracast_display_enabled">MiracastDisplay should be enabled on the TV</string>
+    <string name="click_start_and_wifi_display">Click \'start\' and make sure wireless display option is enabled</string>
+    <string name="start">Start</string>
+    <string name="guide">Guide</string>
+    <string name="instruction">Instruction:</string>
+    <string name="turn_on_tv">Turn on your smart TV</string>
+    <string name="both_device_connect_automatically">Both devices will connect automatically</string>
+    <string name="no">No</string>
+    <string name="wifi_permission_dialog">Your wifi connection is disabled. Please connect turn on wifi from your phone to connect with your TV</string>
+    <string name="sorry_no_wifi_connection">Sorry, Your phone\'s wifi connection is disabled. To use this app, please turn on your phone\'s wifi connection.</string>
+    <string name="mirroring_assistant">Screen Mirroring Assistant</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="please_rate">Please rate</string>
+    <string name="a_moment_to_rate">Thanks for using this app. Please take a moment to rate it.</string>
+    <string name="cancel">Cancel</string>
+    <string name="rate_it">Rate it</string>
+    <string name="click_back_again">Please click BACK again to exit</string>
 
 
     <string-array name="tv_list_array">

@@ -3,18 +3,26 @@
     package="miracast.android.to.tv">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.setting.permission.ALLSHARE_CAST_SERVICE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".preparation.PreparationActivity"></activity>
+        <activity android:name=".privacy_policy.PrivacyPolicyActivity"></activity>
+        <activity android:name=".guide.GuideActivity" />
+        <activity android:name=".preparation.PreparationActivity" />
         <activity android:name=".progress.ProgressActivity" />
         <activity android:name=".connection_mode.ConnectionModeActivity" />
         <activity android:name=".tv_list.TvListActivity" />
+        <activity android:name=".home.MainActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.MainActivity" />
     </application>
 
 </manifest>

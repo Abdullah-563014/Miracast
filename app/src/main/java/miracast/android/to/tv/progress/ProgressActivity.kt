@@ -10,6 +10,7 @@ import com.squareup.picasso.Picasso
 import miracast.android.to.tv.R
 import miracast.android.to.tv.databinding.ActivityProgressBinding
 import miracast.android.to.tv.preparation.PreparationActivity
+import java.lang.Exception
 
 class ProgressActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -56,12 +57,16 @@ class ProgressActivity : AppCompatActivity(), View.OnClickListener {
         override fun run() {
             counter=0
             while (counter<=99 && !isInterrupted) {
-                counter++
-                sleep(150)
-                runOnUiThread(kotlinx.coroutines.Runnable {
-                    binding.ProgressBar.progress=counter
-                    progressToCheckBoxOperation()
-                })
+                try {
+                    counter++
+                    sleep(150)
+                    runOnUiThread(kotlinx.coroutines.Runnable {
+                        binding.ProgressBar.progress=counter
+                        progressToCheckBoxOperation()
+                    })
+                } catch (e : Exception) {
+
+                }
             }
         }
     }

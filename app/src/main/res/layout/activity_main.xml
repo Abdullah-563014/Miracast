@@ -8,12 +8,87 @@
     tools:context=".home.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/mirroring_assistant"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deviceSpecs"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/modelName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/productName"
+            app:layout_constraintTop_toBottomOf="@+id/modelName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/osVersionName"
+            app:layout_constraintTop_toBottomOf="@+id/productName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/versionSDKVersion"
+            app:layout_constraintTop_toBottomOf="@+id/osVersionName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/widiBtn"
+        style="@style/MyButtonStyle"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpecs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/general_button_background"
+        android:text="@string/start" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
