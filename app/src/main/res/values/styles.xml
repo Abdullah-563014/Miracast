@@ -17,14 +17,13 @@
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
         <item name="colorControlNormal">@color/colorWhite</item>
         <item name="colorControlHighlight">@color/colorWhite</item>
-        <item name="android:popupMenuStyle">@style/MyDarkToolbarStyle</item>
+        <item name="actionBarPopupTheme">@style/MyDarkToolbarStyle</item>
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
     </style>
 
     <style name="MyDarkToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:colorBackground">@color/colorPrimaryDark</item>
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:popupBackground">@color/colorPrimaryDark</item>
     </style>
 
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
