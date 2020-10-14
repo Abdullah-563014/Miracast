@@ -31,6 +31,19 @@ class ConnectionModeActivity : AppCompatActivity(), View.OnClickListener {
     private fun setUpUi() {
         Picasso.get().load(R.drawable.ic_launcher).error(R.drawable.ic_launcher).into(binding.appLogo)
         binding.nextButton.setOnClickListener(this)
+        binding.connectionModeRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            when(checkedId) {
+                R.id.autoConnectionRadioButton -> {
+                    binding.autoConnectionRadioButton.isChecked=true
+                    binding.manualConnectionRadioButton.isChecked=false
+                }
+
+                R.id.manualConnectionRadioButton -> {
+                    binding.autoConnectionRadioButton.isChecked=false
+                    binding.manualConnectionRadioButton.isChecked=true
+                }
+            }
+        }
     }
 
     private fun initAnimation() {

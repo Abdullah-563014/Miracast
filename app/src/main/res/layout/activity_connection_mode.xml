@@ -29,13 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/connectionModeRadioGroup"
         app:layout_constraintTop_toBottomOf="@+id/connectionModeTitleTextView"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content">
         <RadioButton
+            android:id="@+id/autoConnectionRadioButton"
             android:text="@string/auto_mode"
             android:background="@drawable/button_transparent_background"
             android:textColor="@color/colorWhite"
@@ -47,6 +48,7 @@
             android:layout_width="@dimen/_180sdp"
             android:layout_height="wrap_content"/>
         <RadioButton
+            android:id="@+id/manualConnectionRadioButton"
             android:text="@string/manual_mode"
             android:background="@drawable/button_transparent_background"
             android:textColor="@color/colorWhite"
