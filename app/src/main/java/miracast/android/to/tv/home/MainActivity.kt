@@ -5,6 +5,7 @@ import android.app.AlertDialog.THEME_HOLO_LIGHT
 import android.content.*
 import android.net.Uri
 import android.net.wifi.WifiManager
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
@@ -125,6 +126,33 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Utils.saveIntToStorage(applicationContext,counterKey,counter+1)
     }
 
+    private fun checkWifiState() {
+        if (!wifiManager.isWifiEnabled) {
+            if (Build.VERSION.SDK_INT>=29) {
+                showWifiOnAlertDialog()
+            } else {
+                wifiManager.setWifiEnabled(true)
+                wifidisplay()
+            }
+        } else {
+            wifidisplay()
+        }
+    }
+
+    private fun showWifiOnAlertDialog() {
+        val builder : AlertDialog.Builder=AlertDialog.Builder(this)
+        builder.setCancelable(false)
+        builder.setMessage(resources.getString(R.string.wifi_permission_dialog))
+        builder.setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
+            dialog.dismiss()
+            finishAffinity()
+        }
+        val alertDialog : AlertDialog=builder.create()
+        if (!isFinishing) {
+            alertDialog.show()
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
         return super.onCreateOptionsMenu(menu)
@@ -144,30 +172,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when(v!!.id) {
-            R.id.widiBtn -> if (wifiManager.isWifiEnabled) {
-                wifidisplay()
-            } else {
-                Toast.makeText(
-                    this@MainActivity,
-                    resources.getString(R.string.sorry_no_wifi_connection),
-                    Toast.LENGTH_LONG
-                ).show()
-                finishAffinity()
-            }
+            R.id.widiBtn -> checkWifiState()
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        if (!wifiManager.isWifiEnabled) {
-            Toast.makeText(
-                this@MainActivity,
-                resources.getString(R.string.sorry_no_wifi_connection),
-                Toast.LENGTH_LONG
-            ).show()
-            finishAffinity()
-        }
-    }
 
 
 }
