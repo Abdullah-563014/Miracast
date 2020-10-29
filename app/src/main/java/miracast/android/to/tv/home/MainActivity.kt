@@ -8,6 +8,7 @@ import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -166,8 +167,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     PrivacyPolicyActivity::class.java
                 )
             )
+            R.id.toolbarRatingMenuId -> openAppInPlayStore()
         }
         return true
+    }
+
+    private fun openAppInPlayStore() {
+        val i: Intent =  Intent(Intent.ACTION_VIEW)
+        i.data = Uri.parse("https://play.google.com/store/apps/details?id="+packageName)
+        startActivity(i)
     }
 
     override fun onClick(v: View?) {

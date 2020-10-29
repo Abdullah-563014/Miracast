@@ -6,4 +6,9 @@
         android:title="@string/privacy_policy"
         android:icon="@drawable/ic_privacy_policy"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/toolbarRatingMenuId"
+        android:title="@string/rate_it"
+        android:icon="@drawable/ic_rating"
+        app:showAsAction="ifRoom"/>
 </menu>
