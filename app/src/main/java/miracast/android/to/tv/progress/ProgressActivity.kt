@@ -1,8 +1,11 @@
 package miracast.android.to.tv.progress
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -10,6 +13,7 @@ import com.squareup.picasso.Picasso
 import miracast.android.to.tv.R
 import miracast.android.to.tv.databinding.ActivityProgressBinding
 import miracast.android.to.tv.preparation.PreparationActivity
+import miracast.android.to.tv.privacy_policy.PrivacyPolicyActivity
 import java.lang.Exception
 
 class ProgressActivity : AppCompatActivity(), View.OnClickListener {
@@ -89,6 +93,30 @@ class ProgressActivity : AppCompatActivity(), View.OnClickListener {
         when(p0!!.id) {
             R.id.okButton -> gotoNextActivity()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            R.id.toolbarPrivacyPolicyMenuId -> startActivity(
+                Intent(
+                    this@ProgressActivity,
+                    PrivacyPolicyActivity::class.java
+                )
+            )
+            R.id.toolbarRatingMenuId -> openAppInPlayStore()
+        }
+        return true
+    }
+
+    private fun openAppInPlayStore() {
+        val i: Intent =  Intent(Intent.ACTION_VIEW)
+        i.data = Uri.parse("https://play.google.com/store/apps/details?id="+applicationContext.packageName)
+        startActivity(i)
     }
 
     override fun onDestroy() {

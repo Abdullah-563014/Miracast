@@ -55,7 +55,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         wifiManager= applicationContext.getSystemService(WIFI_SERVICE) as WifiManager
         mContext = this
         activity = this
-        rateMyApp()
         device = DeviceSpecs()
         binding.modelName.text = resources.getString(R.string.step)
         binding.productName.text = resources.getString(R.string.tv_and_mobile_same_wifi)
@@ -91,40 +90,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         doubleBackToExitPressedOnce = true
         Toast.makeText(this, resources.getString(R.string.click_back_again), Toast.LENGTH_SHORT).show()
         Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
-    }
-
-    private fun rateMyApp() {
-        val counter : Int = Utils.getIntFromStorage(applicationContext,counterKey,0)
-        if (counter != 0 && counter % 5 == 0) {
-            val alert: AlertDialog.Builder = AlertDialog.Builder(this,R.style.MyDialogTheme)
-            alert.setTitle(resources.getString(R.string.please_rate))
-            alert.setMessage(resources.getString(R.string.a_moment_to_rate))
-            alert.setPositiveButton(resources.getString(R.string.cancel)
-            ) { dialog, whichButton -> dialog.dismiss() }
-            alert.setNegativeButton(resources.getString(R.string.rate_it)
-            ) { dialog, which ->
-                val appName = applicationContext.packageName
-                try {
-                    startActivity(
-                        Intent(
-                            "android.intent.action.VIEW",
-                            Uri.parse("market://details?id=$appName")
-                        )
-                    )
-                } catch (e: ActivityNotFoundException) {
-                    startActivity(
-                        Intent(
-                            "android.intent.action.VIEW",
-                            Uri.parse("http://play.google.com/store/apps/details?id=$appName")
-                        )
-                    )
-                }
-            }
-            if (!isFinishing) {
-                alert.show()
-            }
-        }
-        Utils.saveIntToStorage(applicationContext,counterKey,counter+1)
     }
 
     private fun checkWifiState() {
@@ -174,7 +139,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun openAppInPlayStore() {
         val i: Intent =  Intent(Intent.ACTION_VIEW)
-        i.data = Uri.parse("https://play.google.com/store/apps/details?id="+packageName)
+        i.data = Uri.parse("https://play.google.com/store/apps/details?id="+applicationContext.packageName)
         startActivity(i)
     }
 

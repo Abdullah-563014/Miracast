@@ -2,16 +2,20 @@ package miracast.android.to.tv.preparation
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.net.Uri
 import android.net.wifi.WifiManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import miracast.android.to.tv.R
 import miracast.android.to.tv.databinding.ActivityPreparationBinding
 import miracast.android.to.tv.guide.GuideActivity
 import miracast.android.to.tv.home.MainActivity
+import miracast.android.to.tv.privacy_policy.PrivacyPolicyActivity
 
 class PreparationActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -81,6 +85,30 @@ class PreparationActivity : AppCompatActivity(), View.OnClickListener {
             R.id.preparationStartButton -> gotoNextActivity("start")
             R.id.preparationGuideButton -> gotoNextActivity("guide")
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            R.id.toolbarPrivacyPolicyMenuId -> startActivity(
+                Intent(
+                    this@PreparationActivity,
+                    PrivacyPolicyActivity::class.java
+                )
+            )
+            R.id.toolbarRatingMenuId -> openAppInPlayStore()
+        }
+        return true
+    }
+
+    private fun openAppInPlayStore() {
+        val i: Intent =  Intent(Intent.ACTION_VIEW)
+        i.data = Uri.parse("https://play.google.com/store/apps/details?id="+applicationContext.packageName)
+        startActivity(i)
     }
 
 
